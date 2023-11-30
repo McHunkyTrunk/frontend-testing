@@ -64,6 +64,54 @@ describe("Calculator app", function () {
   });
 
   describe("visual testing", () => {
-    // ...
+    let eyes;
+    let runner;
+    let config;
+
+    before(async () => {
+      const applitoolsApiKey = process.env.APPLITOOLS_API_KEY;
+
+      runner = new ClassicRunner();
+      config = new Configuration();
+
+      config.setApiKey(applitoolsApiKey);
+    });
+
+    beforeEach(async function () {
+      eyes = new Eyes(runner);
+
+      eyes.setConfiguration(config);
+
+      await eyes.open(driver, "Calculator App", "Tests", new RectangleSize(1200, 600));
+    });
+
+    afterEach(async function () {
+      /*
+       * Close Eyes to tell the server it should display the results.
+       * Warning: `eyes.closeAsync()` will NOT wait for visual checkpoints to complete.
+       * You will need to check the Eyes Test Manager for visual results per checkpoint.
+       * Note that "unresolved" and "failed" visual checkpoints will not cause the Mocha test to fail.
+       *
+       * If you want the test to wait synchronously for all checkpoints to complete, then use `eyes.close()`.
+       * If any checkpoints are unresolved or failed, then `eyes.close()` will make the test fail.
+       * TODO: `eyes.close()` does not work. Why?
+       */
+      await eyes.closeAsync();
+      // eyes.close();
+    });
+
+    after(async () => {
+      const allTestResults = await runner.getAllTestResults();
+
+      console.log(allTestResults._summary);
+    });
+
+    it("should look good (when tested with Applitools)", async function () {
+      await eyes.checkWindow("Landing page");
+
+      await multiply42By2(driver);
+
+      await eyes.checkWindow("After calculating 42 * 2 =");
+    });
   });
 });
