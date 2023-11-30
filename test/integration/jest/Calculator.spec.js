@@ -10,15 +10,17 @@ afterEach(cleanup);
 
 describe("Calculator component", () => {
   it("should display reset button", () => {
-    // TODO (Hint: Find element and use a matcher.)
-    // const element = ...
-    // expect ...
+    const {getByTestId} = render(<Calculator />);
+
+    expect(getByTestId("Keypad__operator-reset")).toBeVisible();
   });
 
-  it("should display '42'", () => {
-    // TODO (Hint: Find and click buttons and use a matcher.)
-    // const buttons = [...]
-    // ...
-    // expect ...
+  it("should display values", () => {
+    const {getByTestId} = render(<Calculator />);
+
+    fireEvent.click(getByTestId("Keypad__digit-4"));
+    fireEvent.click(getByTestId("Keypad__digit-2"));
+
+    expect(getByTestId("Display__value")).toHaveTextContent("42");
   });
-});
+} );
