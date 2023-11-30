@@ -46,10 +46,18 @@ describe("Calculator component", function () {
 
     expect(displayElement.textContent).to.equal("0");
 
-    // TODO (Hint: Find and click buttons and check the display again.)
-    // const buttons = [...]
-    // ...
-    // expect ...
+    const digit4Element = document.querySelector(".digit-4");
+    const digit2Element = document.querySelector(".digit-2");
+    const operatorMultiply = document.querySelector(".operator-multiply");
+    const operatorEquals = document.querySelector(".operator-equals");
+
+    digit4Element.click();
+    digit2Element.click();
+    operatorMultiply.click();
+    digit2Element.click();
+    operatorEquals.click();
+
+    expect(displayElement.textContent).to.equal("84");
   });
 
   it("should work and match snapshots (when tested with React Test Reanderer)", function () {
