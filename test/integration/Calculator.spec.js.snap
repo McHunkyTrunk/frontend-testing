@@ -1,0 +1,495 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Calculator component should work and match snapshots (when tested with React Test Reanderer) 1`] = `
+<div
+  className="Calculator"
+>
+  <div
+    className="Display"
+    data-testid="Display"
+  >
+    <span
+      className="main-value"
+      data-testid="Display__value"
+    >
+      0
+    </span>
+    <span
+      className="secondary-value"
+    />
+  </div>
+  <table
+    className="Keypad"
+    data-testid="Keypad"
+  >
+    <tbody>
+      <tr>
+        <td
+          className="digit digit-7"
+          data-digit="7"
+          data-testid="Keypad__digit-7"
+          onClick={[Function]}
+        >
+          7
+        </td>
+        <td
+          className="digit digit-8"
+          data-digit="8"
+          data-testid="Keypad__digit-8"
+          onClick={[Function]}
+        >
+          8
+        </td>
+        <td
+          className="digit digit-9"
+          data-digit="9"
+          data-testid="Keypad__digit-9"
+          onClick={[Function]}
+        >
+          9
+        </td>
+        <td
+          className="operator operator-plus"
+          data-operator="+"
+          data-testid="Keypad__operator-plus"
+          onClick={[Function]}
+        >
+          +
+        </td>
+      </tr>
+      <tr>
+        <td
+          className="digit digit-4"
+          data-digit="4"
+          data-testid="Keypad__digit-4"
+          onClick={[Function]}
+        >
+          4
+        </td>
+        <td
+          className="digit digit-5"
+          data-digit="5"
+          data-testid="Keypad__digit-5"
+          onClick={[Function]}
+        >
+          5
+        </td>
+        <td
+          className="digit digit-6"
+          data-digit="6"
+          data-testid="Keypad__digit-6"
+          onClick={[Function]}
+        >
+          6
+        </td>
+        <td
+          className="operator operator-subtract"
+          data-operator="-"
+          data-testid="Keypad__operator-subtract"
+          onClick={[Function]}
+        >
+          -
+        </td>
+      </tr>
+      <tr>
+        <td
+          className="digit digit-1"
+          data-digit="1"
+          data-testid="Keypad__digit-1"
+          onClick={[Function]}
+        >
+          1
+        </td>
+        <td
+          className="digit digit-2"
+          data-digit="2"
+          data-testid="Keypad__digit-2"
+          onClick={[Function]}
+        >
+          2
+        </td>
+        <td
+          className="digit digit-3"
+          data-digit="3"
+          data-testid="Keypad__digit-3"
+          onClick={[Function]}
+        >
+          3
+        </td>
+        <td
+          className="operator operator-multiply"
+          data-operator="*"
+          data-testid="Keypad__operator-multiply"
+          onClick={[Function]}
+        >
+          *
+        </td>
+      </tr>
+      <tr>
+        <td
+          className="operator operator-reset"
+          data-operator="C"
+          data-testid="Keypad__operator-reset"
+          onClick={[Function]}
+        >
+          C
+        </td>
+        <td
+          className="digit digit-0"
+          data-digit="0"
+          data-testid="Keypad__digit-0"
+          onClick={[Function]}
+        >
+          0
+        </td>
+        <td
+          className="operator operator-equals"
+          data-operator="="
+          data-testid="Keypad__operator-equals"
+          onClick={[Function]}
+        >
+          =
+        </td>
+        <td
+          className="operator operator-divide"
+          data-operator="/"
+          data-testid="Keypad__operator-divide"
+          onClick={[Function]}
+        >
+          /
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
+
+exports[`Calculator component should work and match snapshots (when tested with React Test Reanderer) 2`] = `
+<div
+  className="Calculator"
+>
+  <div
+    className="Display"
+    data-testid="Display"
+  >
+    <span
+      className="main-value"
+      data-testid="Display__value"
+    >
+      1337
+    </span>
+    <span
+      className="secondary-value"
+    >
+      0
+    </span>
+  </div>
+  <table
+    className="Keypad"
+    data-testid="Keypad"
+  >
+    <tbody>
+      <tr>
+        <td
+          className="digit digit-7"
+          data-digit="7"
+          data-testid="Keypad__digit-7"
+          onClick={[Function]}
+        >
+          7
+        </td>
+        <td
+          className="digit digit-8"
+          data-digit="8"
+          data-testid="Keypad__digit-8"
+          onClick={[Function]}
+        >
+          8
+        </td>
+        <td
+          className="digit digit-9"
+          data-digit="9"
+          data-testid="Keypad__digit-9"
+          onClick={[Function]}
+        >
+          9
+        </td>
+        <td
+          className="operator operator-plus"
+          data-operator="+"
+          data-testid="Keypad__operator-plus"
+          onClick={[Function]}
+        >
+          +
+        </td>
+      </tr>
+      <tr>
+        <td
+          className="digit digit-4"
+          data-digit="4"
+          data-testid="Keypad__digit-4"
+          onClick={[Function]}
+        >
+          4
+        </td>
+        <td
+          className="digit digit-5"
+          data-digit="5"
+          data-testid="Keypad__digit-5"
+          onClick={[Function]}
+        >
+          5
+        </td>
+        <td
+          className="digit digit-6"
+          data-digit="6"
+          data-testid="Keypad__digit-6"
+          onClick={[Function]}
+        >
+          6
+        </td>
+        <td
+          className="operator operator-subtract"
+          data-operator="-"
+          data-testid="Keypad__operator-subtract"
+          onClick={[Function]}
+        >
+          -
+        </td>
+      </tr>
+      <tr>
+        <td
+          className="digit digit-1"
+          data-digit="1"
+          data-testid="Keypad__digit-1"
+          onClick={[Function]}
+        >
+          1
+        </td>
+        <td
+          className="digit digit-2"
+          data-digit="2"
+          data-testid="Keypad__digit-2"
+          onClick={[Function]}
+        >
+          2
+        </td>
+        <td
+          className="digit digit-3"
+          data-digit="3"
+          data-testid="Keypad__digit-3"
+          onClick={[Function]}
+        >
+          3
+        </td>
+        <td
+          className="operator operator-multiply"
+          data-operator="*"
+          data-testid="Keypad__operator-multiply"
+          onClick={[Function]}
+        >
+          *
+        </td>
+      </tr>
+      <tr>
+        <td
+          className="operator operator-reset"
+          data-operator="C"
+          data-testid="Keypad__operator-reset"
+          onClick={[Function]}
+        >
+          C
+        </td>
+        <td
+          className="digit digit-0"
+          data-digit="0"
+          data-testid="Keypad__digit-0"
+          onClick={[Function]}
+        >
+          0
+        </td>
+        <td
+          className="operator operator-equals"
+          data-operator="="
+          data-testid="Keypad__operator-equals"
+          onClick={[Function]}
+        >
+          =
+        </td>
+        <td
+          className="operator operator-divide"
+          data-operator="/"
+          data-testid="Keypad__operator-divide"
+          onClick={[Function]}
+        >
+          /
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
+
+exports[`Calculator component should work and match snapshots (when tested with React Test Reanderer) 3`] = `
+<div
+  className="Calculator"
+>
+  <div
+    className="Display"
+    data-testid="Display"
+  >
+    <span
+      className="main-value"
+      data-testid="Display__value"
+    >
+      191
+    </span>
+    <span
+      className="secondary-value"
+    />
+  </div>
+  <table
+    className="Keypad"
+    data-testid="Keypad"
+  >
+    <tbody>
+      <tr>
+        <td
+          className="digit digit-7"
+          data-digit="7"
+          data-testid="Keypad__digit-7"
+          onClick={[Function]}
+        >
+          7
+        </td>
+        <td
+          className="digit digit-8"
+          data-digit="8"
+          data-testid="Keypad__digit-8"
+          onClick={[Function]}
+        >
+          8
+        </td>
+        <td
+          className="digit digit-9"
+          data-digit="9"
+          data-testid="Keypad__digit-9"
+          onClick={[Function]}
+        >
+          9
+        </td>
+        <td
+          className="operator operator-plus"
+          data-operator="+"
+          data-testid="Keypad__operator-plus"
+          onClick={[Function]}
+        >
+          +
+        </td>
+      </tr>
+      <tr>
+        <td
+          className="digit digit-4"
+          data-digit="4"
+          data-testid="Keypad__digit-4"
+          onClick={[Function]}
+        >
+          4
+        </td>
+        <td
+          className="digit digit-5"
+          data-digit="5"
+          data-testid="Keypad__digit-5"
+          onClick={[Function]}
+        >
+          5
+        </td>
+        <td
+          className="digit digit-6"
+          data-digit="6"
+          data-testid="Keypad__digit-6"
+          onClick={[Function]}
+        >
+          6
+        </td>
+        <td
+          className="operator operator-subtract"
+          data-operator="-"
+          data-testid="Keypad__operator-subtract"
+          onClick={[Function]}
+        >
+          -
+        </td>
+      </tr>
+      <tr>
+        <td
+          className="digit digit-1"
+          data-digit="1"
+          data-testid="Keypad__digit-1"
+          onClick={[Function]}
+        >
+          1
+        </td>
+        <td
+          className="digit digit-2"
+          data-digit="2"
+          data-testid="Keypad__digit-2"
+          onClick={[Function]}
+        >
+          2
+        </td>
+        <td
+          className="digit digit-3"
+          data-digit="3"
+          data-testid="Keypad__digit-3"
+          onClick={[Function]}
+        >
+          3
+        </td>
+        <td
+          className="operator operator-multiply"
+          data-operator="*"
+          data-testid="Keypad__operator-multiply"
+          onClick={[Function]}
+        >
+          *
+        </td>
+      </tr>
+      <tr>
+        <td
+          className="operator operator-reset"
+          data-operator="C"
+          data-testid="Keypad__operator-reset"
+          onClick={[Function]}
+        >
+          C
+        </td>
+        <td
+          className="digit digit-0"
+          data-digit="0"
+          data-testid="Keypad__digit-0"
+          onClick={[Function]}
+        >
+          0
+        </td>
+        <td
+          className="operator operator-equals"
+          data-operator="="
+          data-testid="Keypad__operator-equals"
+          onClick={[Function]}
+        >
+          =
+        </td>
+        <td
+          className="operator operator-divide"
+          data-operator="/"
+          data-testid="Keypad__operator-divide"
+          onClick={[Function]}
+        >
+          /
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;

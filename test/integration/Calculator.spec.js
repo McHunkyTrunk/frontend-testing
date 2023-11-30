@@ -65,9 +65,28 @@ describe("Calculator component", function () {
 
     expect(component.toJSON()).to.matchSnapshot();
 
-    const root = component.root;
+    const KeypadElement = component.root.findByType(Keypad);
 
-    // TODO (Hints: a) Find buttons, click/act on them, check snapshots; b) text elements have a string as the only
-    // child.) const KeypadElement = ... const buttons = [...] TestRenderer.act(...) expect ...
+    // manually trigger some clicks on digits
+    TestRenderer.act(() => KeypadElement.findByProps({"data-digit": "1"}).props.onClick());
+    TestRenderer.act(() => KeypadElement.findByProps({"data-digit": "3"}).props.onClick());
+    TestRenderer.act(() => KeypadElement.findByProps({"data-digit": "3"}).props.onClick());
+    TestRenderer.act(() => KeypadElement.findByProps({"data-digit": "7"}).props.onClick());
+
+    // re-rendering
+    expect(component.toJSON()).to.matchSnapshot();
+
+    // manually trigger a calculation
+    TestRenderer.act(() => KeypadElement.findByProps({"data-operator": "/"}).props.onClick());
+    TestRenderer.act(() => KeypadElement.findByProps({"data-digit": "7"}).props.onClick());
+    TestRenderer.act(() => KeypadElement.findByProps({"data-operator": "="}).props.onClick());
+
+    // re-rendering
+    expect(component.toJSON()).to.matchSnapshot();
+
+    const DisplayElement = component.root.findByType(Display);
+    const valueElement = DisplayElement.findByProps({"data-testid": "Display__value"});
+
+    expect(valueElement.children[0]).to.equal("191");
   });
 });
