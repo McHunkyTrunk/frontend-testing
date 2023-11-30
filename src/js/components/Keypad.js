@@ -48,7 +48,7 @@ const Keypad = ({onKey}) => {
         </tr>
 
         <tr>
-          <td className="empty" />
+          {renderOperator("C", "reset")}
           {renderNumber("0")}
           {renderOperator("=", "equals")}
           {renderOperator("/", "divide")}

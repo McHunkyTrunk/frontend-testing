@@ -75,19 +75,20 @@ describe("calculator", function () {
     expect(stream("8/2=").currentValue).to.equal("4");
   });
 
-  it("...", () => {
-    // TODO test 9
+
+  it("should not change initial state on reset", () => {
+    expect(stream("C").currentValue).to.equal("0");
   });
 
-  it("...", () => {
-    // TODO test 10
+  it("should properly reset after some digits have been entered", () => {
+    expect(stream("123C").currentValue).to.equal("0");
   });
 
-  it("...", () => {
-    // TODO test 11
+  it("should properly reset after computation", () => {
+    expect(stream("1+2=C").currentValue).to.equal("0");
   });
 
-  it("...", () => {
-    // TODO test 12
+  it("should properly reset and continue after computation", () => {
+    expect(stream("1+2=C+1337").currentValue).to.equal("1337");
   });
 });
