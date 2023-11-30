@@ -1,0 +1,69 @@
+html, body {
+  font-family: "PT Mono", monospace;
+  font-size: 20px;
+}
+
+.Calculator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Keypad {
+  border-collapse: collapse;
+  width: 50%;
+
+  .digit, .operator, .empty {
+    cursor: pointer;
+    border: 1px solid #000000;
+    padding: 0.5rem;
+    width: 5vw;
+    height: 5vw;
+    text-align: center;
+  }
+
+  .operator {
+    background-color: #333333;
+    color: #FFFFFF;
+    border-color: #000000;
+
+    &:hover {
+      background-color: #FFFF00;
+      color: #333333;
+    }
+  }
+
+  .operator-reset {
+    background-color: lightcoral;
+  }
+
+  .digit:hover {
+    background-color: #F0F0F0;
+    color: #333333;
+  }
+
+  .empty {
+    cursor: default;
+  }
+}
+
+.Display {
+  background: deepskyblue;
+  border-radius: 5px;
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  padding: 10px 0;
+  position: relative;
+  text-align: center;
+  width: 50%;
+
+  .secondary-value {
+    bottom: 5px;
+    font-size: 1rem;
+    font-weight: normal;
+    left: 5px;
+    opacity: 0.5;
+    position: absolute;
+  }
+}
