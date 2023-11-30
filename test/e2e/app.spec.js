@@ -9,8 +9,16 @@ const PORT = 9090;
 const {By, until} = webdriver;
 
 async function multiply42By2(driver) {
-  // TODO (Hint: Find buttons by their css or class name and click them.)
-  // const digit4Element = await ...
+  const digit4Element = await driver.findElement(By.css(".digit-4"));
+  const digit2Element = await driver.findElement(By.css(".digit-2"));
+  const operatorMultiply = await driver.findElement(By.css(".operator-multiply"));
+  const operatorEquals = await driver.findElement(By.css(".operator-equals"));
+
+  await digit4Element.click();
+  await digit2Element.click();
+  await operatorMultiply.click();
+  await digit2Element.click();
+  await operatorEquals.click();
 }
 
 describe("Calculator app", function () {
@@ -44,7 +52,15 @@ describe("Calculator app", function () {
   afterEach(async () => await driver.quit());
 
   it("should work (when tested with Selenium Webdriver)", async function () {
-    // TODO (Hint: Use `driver.wait(...)` and `until.titleIs(...)` / `until.elementTextIs(...)` wait conditions.)
+    await driver.wait(until.titleIs("Calculator"));
+
+    const DisplayElement = await driver.findElement(By.css(".Display"));
+
+    await driver.wait(until.elementTextIs(DisplayElement, "0"));
+
+    await multiply42By2(driver);
+
+    await driver.wait(until.elementTextIs(DisplayElement, "84"));
   });
 
   describe("visual testing", () => {
