@@ -31,6 +31,11 @@ html, body {
       background-color: #FFFF00;
       color: #333333;
     }
+
+    &:active {
+      background-color: magenta;
+      color: #333333;
+    }
   }
 
   .operator-reset {
@@ -40,6 +45,11 @@ html, body {
   .digit:hover {
     background-color: #F0F0F0;
     color: #333333;
+
+    &:active {
+      background-color: magenta;
+      color: #333333;
+    }
   }
 
   .empty {
